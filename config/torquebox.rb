@@ -11,10 +11,14 @@ TorqueBox.configure do
 
   job SolicitUser do
     cron "0 0/1 * 1/1 * ? *"
+    singleton true
     config do
       message "You're wonderful"
     end
   end
 
-  service ExternalMessageWatcher
+  service ExternalMessageWatcher do
+    singleton true
+  end
+
 end
