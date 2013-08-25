@@ -16,4 +16,5 @@ TorqueBox.configure do
     end
   end
 
+  service ExternalMessageWatcher
 end
