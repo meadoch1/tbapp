@@ -8,4 +8,12 @@ TorqueBox.configure do
       concurrency 2
     end
   end
+
+  job SolicitUser do
+    cron "0 0/1 * 1/1 * ? *"
+    config do
+      message "You're wonderful"
+    end
+  end
+
 end
